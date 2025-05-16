@@ -22,6 +22,8 @@ RUN apt-get update && apt-get install -y \
     clang \
     libclang-dev \
     protobuf-compiler \
+    gcc-mipsel-linux-gnu \
+    g++-mipsel-linux-gnu \
     && rm -rf /var/lib/apt/lists/*
 
 # install golang
