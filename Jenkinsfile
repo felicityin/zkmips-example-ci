@@ -26,11 +26,6 @@ pipeline {
                 sh 'sh -x scripts/run_cycle_tracking.sh'
             }
         }
-        stage('run example: fibonacci_c_lib') {
-            steps {
-                sh 'sh -x scripts/run_fibonacci_c_lib.sh'
-            }
-        }
         stage('run example: fibonacci') {
             steps {
                 sh 'sh -x scripts/run_fibonacci.sh'
@@ -86,5 +81,10 @@ pipeline {
                 sh 'sh -x scripts/run_unconstrained.sh'
             }
         }
+        // stage('run example: fibonacci_c_lib') {
+        //     steps {
+        //         sh 'sh -x scripts/run_fibonacci_c_lib.sh'
+        //     }
+        // }
     }
 }
