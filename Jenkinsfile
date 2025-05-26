@@ -51,11 +51,6 @@ pipeline {
                 sh 'sh -x scripts/run_keccak_precompile.sh'
             }
         }
-        stage('run example: plonk') {
-            steps {
-                sh 'sh -x scripts/run_plonk.sh'
-            }
-        }
         stage('run example: regex') {
             steps {
                 sh 'sh -x scripts/run_regex.sh'
@@ -79,6 +74,11 @@ pipeline {
         stage('run example: unconstrained') {
             steps {
                 sh 'sh -x scripts/run_unconstrained.sh'
+            }
+        }
+        stage('run example: plonk') {
+            steps {
+                sh 'sh -x scripts/run_plonk.sh'
             }
         }
         // stage('run example: fibonacci_c_lib') {
